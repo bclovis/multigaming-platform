@@ -1,0 +1,22 @@
+<div>
+  <h1>Memory</h1>
+  
+  <p><a href="javascript:void(0)" (click)="goBack()">Retour accueil</a></p>
+  
+  <p>Coups joues : {{ moves }}</p>
+  
+  <p *ngIf="isGameOver">Gagne en {{ moves }} coups !</p>
+  
+  <div style="display: grid; grid-template-columns: repeat(4, 60px); gap: 10px;">
+    <button 
+      *ngFor="let card of cards"
+      (click)="flipCard(card)"
+      [disabled]="card.isMatched"
+      style="width: 60px; height: 60px;"
+    >
+      {{ card.isFlipped || card.isMatched ? card.value : '?' }}
+    </button>
+  </div>
+  
+  <button *ngIf="isGameOver" (click)="newGame()">Nouvelle partie</button>
+</div>

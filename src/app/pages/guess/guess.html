@@ -1,0 +1,23 @@
+<div>
+  <h1>Devine le nombre</h1>
+  
+  <p><a href="javascript:void(0)" (click)="goBack()">Retour accueil</a></p>
+  
+  <p>{{ message }}</p>
+  
+  <p>Tentatives : {{ attempts }}</p>
+  
+  <form (ngSubmit)="checkGuess()" *ngIf="!isGameOver">
+    <input 
+      type="number" 
+      [(ngModel)]="guess" 
+      name="guess"
+      min="1" 
+      max="100"
+      placeholder="Ton nombre"
+    />
+    <button type="submit">Deviner</button>
+  </form>
+  
+  <button *ngIf="isGameOver" (click)="newGame()">Nouvelle partie</button>
+</div>

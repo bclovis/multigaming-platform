@@ -1,0 +1,15 @@
+<div class="login-container">
+  <h1>Connexion</h1>
+  
+  <div class="form-group">
+    <label for="username">Nom d'utilisateur :</label>
+    <input 
+      id="username"
+      type="text" 
+      [(ngModel)]="username" 
+      placeholder="Entrez votre nom"
+    >
+  </div>
+
+  <button (click)="onLogin()">Se connecter</button>
+</div>

@@ -1,0 +1,14 @@
+<div>
+  <h1>Profil</h1>
+  
+  <p><a href="javascript:void(0)" (click)="goBack()">Retour accueil</a></p>
+  
+  <h2>{{ username }}</h2>
+  
+  <h3>Statistiques :</h3>
+  <ul *ngIf="stats">
+    <li>Chuck Norris vues : {{ stats.chuckNorrisViews }}</li>
+    <li>Memory meilleur score : {{ stats.memoryBestScore || 'Pas encore joue' }}</li>
+    <li>Devine le nombre meilleur score : {{ stats.guessBestScore || 'Pas encore joue' }}</li>
+  </ul>
+</div>

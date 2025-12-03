@@ -1,0 +1,24 @@
+<div>
+  <h1>Classement</h1>
+  
+  <p><a href="javascript:void(0)" (click)="goBack()">Retour accueil</a></p>
+  
+  <table border="1" style="border-collapse: collapse; width: 100%;">
+    <thead>
+      <tr>
+        <th>Joueur</th>
+        <th>Chuck Norris</th>
+        <th>Memory</th>
+        <th>Devine</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let stat of allStats">
+        <td>{{ stat.username }}</td>
+        <td>{{ stat.chuckNorrisViews }}</td>
+        <td>{{ stat.memoryBestScore || '-' }}</td>
+        <td>{{ stat.guessBestScore || '-' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

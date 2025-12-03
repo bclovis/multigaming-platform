@@ -1,0 +1,32 @@
+<div class="home-container">
+  <header>
+    <h1>Bienvenue {{ username }} !</h1>
+    <button class="logout-btn" (click)="onLogout()">Déconnexion</button>
+  </header>
+
+  <main>
+    <h2>Choisis ton jeu :</h2>
+    
+    <div class="games-menu">
+      <div class="game-card" (click)="navigateTo('/chuck-norris')">
+        <h3>Chuck Norris Jokes</h3>
+        <p>Ris avec les meilleures blagues !</p>
+      </div>
+
+      <div class="game-card" (click)="navigateTo('/memory')">
+        <h3>Memory Game</h3>
+        <p>Teste ta mémoire !</p>
+      </div>
+
+      <div class="game-card" (click)="navigateTo('/guess')">
+        <h3>Guess the Number</h3>
+        <p>Trouve le nombre mystère !</p>
+      </div>
+    </div>
+
+    <div class="menu-links">
+      <button (click)="navigateTo('/profile')">Mon profil</button>
+      <button (click)="navigateTo('/leaderboard')">Classement</button>
+    </div>
+  </main>
+</div>
